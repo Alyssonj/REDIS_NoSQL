@@ -1,0 +1,17 @@
+import redis as rd
+r=rd.redis("localhost")
+
+r.lpush('normal','n1')
+r.lpush('normal','n2')
+r.lpush('normal','n3')
+r.lpush('normal','n4')
+r.lpush('normal','n5')
+r.lpush('normal','n6')
+r.lpush('normal','n7')
+r.lpush('normal','n8')
+r.lpush('normal','n9')
+r.lpush('normal','n10')
+r.lpush('prioritario','p1')
+r.lpush('prioritario','p2')
+r.lpush('prioritario','p3')
+print (r.rpop('n1'))
